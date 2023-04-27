@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  perros:
+    build: ./microservices/perros
+    volumes:
+      - ./microservices/perros:/app
+      - /app/node_modules
+
+  premios:
+    build: ./microservices/premios
+    volumes:
+      - ./microservices/premios:/app
+      - /app/node_modules
+
+  razas:
+    build: ./microservices/razas
+    volumes:
+      - ./microservices/razas:/app
+      - /app/node_modules
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - perros
+      - premios
+      - razas
