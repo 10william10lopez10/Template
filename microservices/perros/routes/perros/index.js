@@ -51,15 +51,30 @@ router.get("/perro/:query", (req, res) => {
 });
 
 //Creamos la ruta para obtener perros por el dueño
-router.get("Dueno/:dueno", (req,res) =>{
-  const dueno = data.dataLibrary.perros.filter((perro) =>{
-    return perro.nombre_dueno.includes(req.params.dueno)
+router.get("/Dueno/:dueno", (req,res) =>{
+  const dueno = data.dataLibrary.perros.filter((raza) =>{
+    return raza.pais_dueño?.includes(req.params.dueno)
   });
 
   const response ={
     service: "perros",
     architecture: " microservicios",
-    data: dueno
+    data: dueno,
+  };
+
+  return res.send(response);
+});
+
+//Creamos la ruta para obtener perros por el dueño
+router.get("/raza/:raza", (req,res) => {
+  const perros = data.dataLibrary.perros.filter((raza) =>{
+    return raza.raza.includes(req.params.raza)
+  });
+
+  const response ={
+    service: "perros",
+    architecture: " microservicios",
+    data: perros,
   };
 
   return res.send(response);

@@ -21,15 +21,9 @@ const db = new sqlite3.Database('data/basePremios.db', (err) => { // inicio de l
       info[index] = row;
     });
   }); // fin del query
-}
-pruebaDB();
 
-
-
-// Creamos una función logger que muestra un mensaje en consola
-const logger = (message) => console.log(`premios: ${message}`);
-
-router.get("/", (req, res) => {
+  //Creamos el router para obtener todos los datos de la query
+  router.get("/", (req, res) => {
     const response = {
       // crea una respuesta con información sobre los libros
       service: "premios",
@@ -40,5 +34,6 @@ router.get("/", (req, res) => {
     logger("Get premios data"); // registra un mensaje en los registros
     return res.json(response); // devuelve la respuesta al cliente
   });
-
+}
+pruebaDB();
 module.exports = router;
