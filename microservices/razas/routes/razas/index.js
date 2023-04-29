@@ -98,4 +98,34 @@ const acreditado = req.params.acreditado;
   return res.json(response);
 })
 
+// segun el id de la raza listar la informacion de la raza y toda la informacion de los perros de esa raza
+
+router.get("/razaID/:id", async (req, res) => {
+  const razaID = RazaArray.filter((razaid) =>{
+    return razaid.id == req.params.id
+  });
+
+  const ArrayPerro = {};
+  for (let raza of razaID) {
+    const perrosRespuesta = await fetch(`http://perros:3000/api/v3/perros/raza/${raza.raza}`);
+    const perrosData = await perrosRespuesta.json();
+    if(perrosData.data.length == 0){
+      continue;      
+    }
+ }
+  // Creamos un objeto de respuesta con los datos de los autores
+  const response = {
+    service: "Perros",
+    architecture: "microservices",
+    length: Object.keys(ArrayPerro).length,
+    perros: ArrayPerro,
+    length: razaID.length,
+    data: razaID,
+  };
+
+  // Enviamos la respuesta
+  return res.send(response);
+});
+
+
 module.exports = router;
