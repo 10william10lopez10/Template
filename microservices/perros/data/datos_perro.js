@@ -6,7 +6,7 @@ exports.dataLibrary = {
       "peso": 9.95,
       "nombre_perro": "Pepito",
       "nombre_dueno": "Juan Perez",
-      "pais_dueno": "Mexico"
+      "pais_origen_dueno": "Mexico"
     },
     {
       "Id": 2,
@@ -14,7 +14,7 @@ exports.dataLibrary = {
       "peso": 31.34,
       "nombre_perro": "Fido",
       "nombre_dueno": "Emily Smith",
-      "pais_dueno": "Estados Unidos"
+      "pais_origen_dueno": "Estados Unidos"
     },
     {
       "Id": 3,
@@ -22,7 +22,7 @@ exports.dataLibrary = {
       "peso": 15.42,
       "nombre_perro": "Mimi",
       "nombre_dueno": "Sophie Dupont",
-      "pais_dueno": "Francia"
+      "pais_origen_dueno": "Francia"
     },
     {
       "Id": 4,
@@ -30,7 +30,7 @@ exports.dataLibrary = {
       "peso": 6.48,
       "nombre_perro": "Lucky",
       "nombre_dueno": "Maria Garcia",
-      "pais_dueno": "Mexico"
+      "pais_origen_dueno": "Mexico"
     },
     {
       "Id": 5,
@@ -38,7 +38,7 @@ exports.dataLibrary = {
       "peso": 39.92,
       "nombre_perro": "Lola",
       "nombre_dueno": "Chen Wei",
-      "pais_dueno": "China"
+      "pais_origen_dueno": "China"
     },
     {
       "Id": 6,
@@ -46,7 +46,7 @@ exports.dataLibrary = {
       "peso": 45.08,
       "nombre_perro": "Bruno",
       "nombre_dueno": "Jack Johnson",
-      "pais_dueno": "Australia"
+      "pais_origen_dueno": "Australia"
     },
     {
       "Id": 7,
@@ -54,7 +54,7 @@ exports.dataLibrary = {
       "peso": 3.31,
       "nombre_perro": "Rocky",
       "nombre_dueno": "Alexis Dubois",
-      "pais_dueno": "Francia"
+      "pais_origen_dueno": "Francia"
     },
     {
       "Id": 8,
@@ -62,7 +62,7 @@ exports.dataLibrary = {
       "peso": 28.87,
       "nombre_perro": "Max",
       "nombre_dueno": "John Smith",
-      "pais_dueno": "Estados Unidos"
+      "pais_origen_dueno": "Estados Unidos"
     },
     {
       "Id": 9,
@@ -70,7 +70,7 @@ exports.dataLibrary = {
       "peso": 40.83,
       "nombre_perro": "Zeus",
       "nombre_dueno": "Hans Müller",
-      "pais_dueno": "Alemania"
+      "pais_origen_dueno": "Alemania"
     },
     {
       "Id": 10,
@@ -78,7 +78,7 @@ exports.dataLibrary = {
       "peso": 37.31,
       "nombre_perro": "Molly",
       "nombre_dueno": "Emma Williams",
-      "pais_dueno": "Reino Unido"
+      "pais_origen_dueno": "Reino Unido"
     },
     {
       "Id": 11,
@@ -86,7 +86,7 @@ exports.dataLibrary = {
       "peso": 11.05,
       "nombre_perro": "Milo",
       "nombre_dueno": "Jessica Davis",
-      "pais_dueno": "Estados Unidos"
+      "pais_origen_dueno": "Estados Unidos"
     },
     {
       "Id": 12,
@@ -94,7 +94,7 @@ exports.dataLibrary = {
       "peso": 26.79,
       "nombre_perro": "Nina",
       "nombre_dueno": "Ivan Petrov",
-      "pais_dueno": "Rusia"
+      "pais_origen_dueno": "Rusia"
     },
     {
       "Id": 13,
@@ -102,7 +102,7 @@ exports.dataLibrary = {
       "peso": 68.91,
       "nombre_perro": "Atlas",
       "nombre_dueno": "Maxime Dubois",
-      "pais_dueno": "Francia"
+      "pais_origen_dueno": "Francia"
     },
     {
       "Id": 14,
@@ -190,7 +190,7 @@ exports.dataLibrary = {
       "peso": 11.02,
       "nombre_perro": "Spot",
       "nombre_dueno": "Luisa Hernandez",
-      "pais_origen": "Mexico"
+      "pais_origen_dueno": "Mexico"
     },
     {
       "Id": 25,
@@ -198,7 +198,7 @@ exports.dataLibrary = {
       "peso": 13.87,
       "nombre_perro": "Lucky",
       "nombre_dueno": "Emily Smith",
-      "pais_origen": "Estados Unidos"
+      "pais_origen_dueno": "Estados Unidos"
     },
     {
       "Id": 26,
@@ -206,7 +206,7 @@ exports.dataLibrary = {
       "peso": 10.5,
       "nombre_perro": "Buddy",
       "nombre_dueno": "Pedro Rodriguez",
-      "pais_origen": "España"
+      "pais_origen_dueno": "España"
     },
     {
       "Id": 27,
@@ -214,7 +214,7 @@ exports.dataLibrary = {
       "peso": 17.6,
       "nombre_perro": "Charlie",
       "nombre_dueno": "Thomas Wagner",
-      "pais_origen": "Alemania"
+      "pais_origen_dueno": "Alemania"
     },
     {
       "Id": 28,
@@ -222,7 +222,7 @@ exports.dataLibrary = {
       "peso": 19.2,
       "nombre_perro": "Daisy",
       "nombre_dueno": "Emma Jones",
-      "pais_origen": "Reino Unido"
+      "pais_origen_dueno": "Reino Unido"
     },
     {
       "Id": 29,
@@ -230,7 +230,7 @@ exports.dataLibrary = {
       "peso": 22.5,
       "nombre_perro": "Max",
       "nombre_dueno": "Marta Sánchez",
-      "pais_origen": "Argentina"
+      "pais_origen_dueno": "Argentina"
     },
     {
       "Id": 30,
@@ -238,7 +238,7 @@ exports.dataLibrary = {
       "peso": 4.25,
       "nombre_perro": "Luna",
       "nombre_dueno": "Julia Fernandez",
-      "pais_origen": "Colombia"
+      "pais_origen_dueno": "Colombia"
     },
     {
       "Id": 31,
@@ -246,7 +246,7 @@ exports.dataLibrary = {
       "peso": 6.8,
       "nombre_perro": "Coco",
       "nombre_dueno": "Hiroshi Nakamura",
-      "pais_origen": "Japón"
+      "pais_origen_dueno": "Japón"
     },
     {
       "Id": 32,
@@ -254,7 +254,7 @@ exports.dataLibrary = {
       "peso": 5.6,
       "nombre_perro": "Mimi",
       "nombre_dueno": "Sophie Martin",
-      "pais_origen": "Francia"
+      "pais_origen_dueno": "Francia"
     },
     {
       "Id": 33,
@@ -262,7 +262,7 @@ exports.dataLibrary = {
       "peso": 14.73,
       "nombre_perro": "Rocky",
       "nombre_dueno": "David Perez",
-      "pais_origen": "Chile"
+      "pais_origen_dueno": "Chile"
     },
     {
       "Id": 34,
@@ -454,7 +454,7 @@ exports.dataLibrary = {
       "peso": 12.15,
       "nombre_perro": "Buddy",
       "nombre_dueño": "Maria",
-      "pais_dueño": "Mexico"
+      "pais_origen_dueno": "Mexico"
     },
     {
       "Id": 59,
@@ -462,7 +462,7 @@ exports.dataLibrary = {
       "peso": 5.82,
       "nombre_perro": "Lola",
       "nombre_dueño": "Luis",
-      "pais_dueño": "Colombia"
+      "pais_origen_dueno": "Colombia"
     },
     {
       "Id": 60,
@@ -470,7 +470,7 @@ exports.dataLibrary = {
       "peso": 30.75,
       "nombre_perro": "Max",
       "nombre_dueño": "Emma",
-      "pais_dueño": "Reino Unido"
+      "pais_origen_dueno": "Reino Unido"
     },
     {
       "Id": 61,
@@ -478,7 +478,7 @@ exports.dataLibrary = {
       "peso": 40.01,
       "nombre_perro": "Bruno",
       "nombre_dueño": "Eduardo",
-      "pais_dueño": "Brasil"
+      "pais_origen_dueno": "Brasil"
     },
     {
       "Id": 62,
@@ -486,7 +486,7 @@ exports.dataLibrary = {
       "peso": 13.24,
       "nombre_perro": "Mimi",
       "nombre_dueño": "Sophie",
-      "pais_dueño": "Francia"
+      "pais_origen_dueno": "Francia"
     },
     {
       "Id": 63,
@@ -494,7 +494,7 @@ exports.dataLibrary = {
       "peso": 35.48,
       "nombre_perro": "Molly",
       "nombre_dueño": "Isabella",
-      "pais_dueño": "Estados Unidos"
+      "pais_origen_dueno": "Estados Unidos"
     },
     {
       "Id": 64,
@@ -502,7 +502,7 @@ exports.dataLibrary = {
       "peso": 10.89,
       "nombre_perro": "Pepito",
       "nombre_dueño": "Pedro",
-      "pais_dueño": "España"
+      "pais_origen_dueno": "España"
     },
     {
       "Id": 65,
@@ -510,7 +510,7 @@ exports.dataLibrary = {
       "peso": 28.18,
       "nombre_perro": "Nina",
       "nombre_dueño": "Hiroshi",
-      "pais_dueño": "Japón"
+      "pais_origen_dueno": "Japón"
     },
     {
       "Id": 66,
@@ -518,7 +518,7 @@ exports.dataLibrary = {
       "peso": 49.73,
       "nombre_perro": "Zeke",
       "nombre_dueño": "Lena",
-      "pais_dueño": "Alemania"
+      "pais_origen_dueno": "Alemania"
     },
     {
       "Id": 67,
@@ -526,7 +526,7 @@ exports.dataLibrary = {
       "peso": 4.92,
       "nombre_perro": "Rocky",
       "nombre_dueño": "Miguel",
-      "pais_dueño": "México"
+      "pais_origen_dueno": "México"
     }
   ],
 };

@@ -48,34 +48,7 @@ router.get("/", (req, res) => {
 });
 
 // creamos un router para traer todos los perros dependiendo del pais de origen de la raza
-/*router.get("/razas2/:PaisOrigen", async (req,res) =>{
-  let PaisOrigen = null;
-  for (let raza of Object.values(RazaArray)) {
-    if (raza.pais_de_origen == req.params.PaisOrigen) {
-      console.log(raza)
-      PaisOrigen = raza;
-      break;
-    }
-  }
 
-  if (!PaisOrigen) {
-    return res.status(404).send("Pais de origen no encontrado");
-  }
-
-  let PaisRespuesta = await fetch(`http://perros:3000/api/v3/perros/raza/${RazaArray.raza}`);
-    const PaisData = await PaisRespuesta.json();
-    const NombrePais = PaisData.data.map((perro) => perro.raza);
-
-  const response = {
-    // crea una respuesta con información sobre los libros
-    service: "Razas",
-    architecture: "microservices",
-    length: PaisOrigen.length,
-    PaisRaza: NombrePais,
-    data: PaisOrigen,
-  };
-  return res.json(response); 
-});*/
 router.get("/razas2/:PaisOrigen", async (req, res) => {
   const PaisOrigen = RazaArray.filter((raza) => raza.pais_de_origen === req.params.PaisOrigen);
 
@@ -83,20 +56,47 @@ router.get("/razas2/:PaisOrigen", async (req, res) => {
     return res.status(404).send("Pais de origen no encontrado");
   }
 
-  const perrosRespuesta = await fetch(`http://perros:3000/api/v3/perros/Dueno/${req.params.PaisOrigen}`);
-  const perrosData = await perrosRespuesta.json();
-  const perros = perrosData.data.map((perro) => perro.raza);
+  const ArrayPerro = {};
+  for (let raza of PaisOrigen) {
+    const perrosRespuesta = await fetch(`http://perros:3000/api/v3/perros/raza/${raza.raza}`);
+    const perrosData = await perrosRespuesta.json();
+    if(perrosData.data.length == 0){
+      continue
+    }
+    const nombresPerros = [];
+    for(let nombre of perrosData.data){
+      nombresPerros.push(nombre.nombre_perro)
+    } 
+    ArrayPerro[raza.raza] = nombresPerros;
+ }
 
   const response = {
     service: "Razas",
     architecture: "microservices",
-    length: PaisOrigen.length,
-    perros: perros,
-    razas: PaisOrigen,
+    length: Object.keys(ArrayPerro).length,
+    perros: ArrayPerro,
   };
-  
+
   return res.json(response);
 });
+
+//Listar todas las razas donde tipo sea igual a "xxxx" y acreditado sea igual a "xxx"
+
+router.get('/TipoRaza/:tipo/:acreditado', (req,res) => {
+  if (req.params.acreditado === 'true'){
+    acreditado = true;
+  }
+  const razas = RazaArray.filter((raza) =>{
+    return raza.raza == req.params.tipo && raza.acreditado === acreditado
+  });
+  const response = {
+    service: "razas",
+    architecture: 'microservicios',
+    length: razas.length,
+    data: razas,
+  }
+  return res.json(response);
+})
 
 
 module.exports = router;
