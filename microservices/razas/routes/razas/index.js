@@ -47,6 +47,18 @@ router.get("/", (req, res) => {
   return res.json(response); // devuelve la respuesta al cliente
 });
 
+router.get("/raza/:raza", (req, res) => {
+  const response = {
+    // crea una respuesta con información sobre los libros
+    service: "Razas",
+    architecture: "microservices",
+    length: RazaArray.length,
+    data: RazaArray,
+  };
+  logger("Get Razas data"); // registra un mensaje en los registros
+  return res.json(response); // devuelve la respuesta al cliente
+});
+
 // creamos un router para traer todos los perros dependiendo del pais de origen de la raza
 
 router.get("/razas2/:PaisOrigen", async (req, res) => {
@@ -112,15 +124,20 @@ router.get("/razaID/:id", async (req, res) => {
     if(perrosData.data.length == 0){
       continue;      
     }
+    const perros = [];
+    for(let nombre of perrosData.data){
+      perros.push(nombre)
+    } 
+    ArrayPerro[raza.raza] = perros;
  }
   // Creamos un objeto de respuesta con los datos de los autores
   const response = {
     service: "Perros",
     architecture: "microservices",
+    length: razaID.length,
+    raza: razaID,
     length: Object.keys(ArrayPerro).length,
     perros: ArrayPerro,
-    length: razaID.length,
-    data: razaID,
   };
 
   // Enviamos la respuesta
