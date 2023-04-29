@@ -83,20 +83,19 @@ router.get("/razas2/:PaisOrigen", async (req, res) => {
 //Listar todas las razas donde tipo sea igual a "xxxx" y acreditado sea igual a "xxx"
 
 router.get('/TipoRaza/:tipo/:acreditado', (req,res) => {
-  if (req.params.acreditado === 'true'){
-    acreditado = true;
-  }
+const tipo = req.params.tipo;
+const acreditado = req.params.acreditado;
   const razas = RazaArray.filter((raza) =>{
-    return raza.raza == req.params.tipo && raza.acreditado === acreditado
+    return raza.tipo == tipo && raza.acreditado === acreditado;
   });
+  
   const response = {
-    service: "razas",
-    architecture: 'microservicios',
+    service: "Razas",
+    architecture: "microservices",
     length: razas.length,
-    data: razas,
-  }
+    razas: razas,
+    };
   return res.json(response);
 })
-
 
 module.exports = router;

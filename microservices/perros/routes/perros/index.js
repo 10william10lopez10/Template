@@ -20,6 +20,30 @@ router.get("/", (req, res) => {
     return res.send(response);
   });
 
+  // devolver el promedio del peso donde la raza sea igual a "xxx"
+  router.get("/promedioRaza/:raza", (req, res) => {
+    const perrosPorRaza = data.dataLibrary.perros.filter((perro) => {
+      return perro.raza === req.params.raza;
+    });
+  
+    if (perrosPorRaza.length === 0) {
+      return res.status(404).send({ message: "No se encontraron perros de la raza especificada" });
+    }
+  
+    const promedioPeso = perrosPorRaza.reduce((acumulador, perro) => {
+      return acumulador + perro.peso;
+    }, 0) / perrosPorRaza.length;
+  
+    const response = {
+      service: "Perros",
+      architecture: "microservices",
+      promedioPesoRaza: promedioPeso,
+      perros: perrosPorRaza
+    };
+  
+    return res.send(response);
+  });
+
   router.get("/PerrosID/:id", (req, res) => {
     const PerrosID = data.dataLibrary.perros.filter((perroid) =>{
       return perroid.Id == req.params.id
