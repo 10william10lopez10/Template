@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "885e792e-37f9-4b05-9fde-92730ab79614",
+		"name": "examen microservicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13457668"
+	},
+	"item": [
+		{
+			"name": "perros",
+			"item": [
+				{
+					"name": "Get perros by promedioPeso",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get perros, razas y premios by pais dueño",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v3/perros/paisDueno/Alemania",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v3",
+								"perros",
+								"paisDueno",
+								"Alemania"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "razas",
+			"item": [
+				{
+					"name": "Get Razas by pais del dueno o de raza",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v3/razas/razas2/Estados Unidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v3",
+								"razas",
+								"razas2",
+								"Estados Unidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get razasby tipo and acreditado",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "premios",
+			"item": [
+				{
+					"name": "Get Premios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v3/premios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v3",
+								"premios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get premios by lugares using query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v3/premios/NombreCampeon?lugar=Tercero",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v3",
+								"premios",
+								"NombreCampeon"
+							],
+							"query": [
+								{
+									"key": "lugar",
+									"value": "Tercero"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get premios by lugar using params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v3/premios/NombreCampeon/Segundo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v3",
+								"premios",
+								"NombreCampeon",
+								"Segundo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  premios by puntaje",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v3/premios/puntuacion/*****",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v3",
+								"premios",
+								"puntuacion",
+								"*****"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
